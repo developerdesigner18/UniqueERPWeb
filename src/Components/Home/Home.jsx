@@ -18,6 +18,7 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 import NavigationBar from "../Navbar";
+import Footer from "../Footer";
 
 export default function Home({
   userEmail,
@@ -38,16 +39,16 @@ export default function Home({
         handleLogoutConform={handleLogoutConform}
       />
       <MDBListGroup
-        style={{ width: "70%", margin: "0 auto" }}
+        style={{ width: "70%", margin: "30px auto" }}
         className="homemdlistgroup"
       >
         <MDBCard
           style={{ zIndex: 1 }}
           border="10px solid red"
-          className="mx-auto w-100 mb-3"
+          className="mx-auto w-100 mb-3 p-2"
         >
           <MDBRow className="d-flex justify-content-center align-items-center g-0">
-            <MDBCol md="4" className="square bg-primary rounded-pill">
+            <MDBCol md="4" className="square ">
               <MDBCardImage
                 src={require("./Referral Program Picture.png")}
                 alt="Refer your Friends"
@@ -78,7 +79,7 @@ export default function Home({
         <MDBCard
           style={{ zIndex: 2 }}
           border="10px solid red"
-          className="mx-auto w-100 mb-3"
+          className="mx-auto w-100 mb-3 p-2"
         >
           <MDBRow className="d-flex justify-content-center align-items-center g-0">
             <MDBCol md="8" className="square rounded-9">
@@ -106,7 +107,7 @@ export default function Home({
           </MDBRow>
         </MDBCard>
 
-        <MDBCard style={{ zIndex: 3 }}>
+        <MDBCard style={{ zIndex: 3 }} border="10px solid red" className="p-2">
           <MDBRow className="d-flex justify-content-center align-items-center g-0">
             <MDBCol md="4">
               <MDBCardImage
@@ -135,6 +136,7 @@ export default function Home({
           </MDBRow>
         </MDBCard>
       </MDBListGroup>
+      <Footer />
     </React.Fragment>
   );
 }

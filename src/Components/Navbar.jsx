@@ -136,19 +136,7 @@ export default function NavigationBar({
           <h5>CandidateId:{candidateId}</h5>
         </MDBCol>
       </MDBRow> */}
-      <MDBFooter
-        style={{ width: "70%", margin: "0 auto", bottom: "0" }}
-        className="text-center"
-        color="white"
-        bgColor="dark"
-      >
-        <span>
-          <h3>
-            If you have any questions, please visit our{" "}
-            <a href="https://contingentpros.com/faqs">FAQ</a>
-          </h3>
-        </span>
-      </MDBFooter>
+
       <Modal show={logOutModal} onHide={() => setlogOutModal(false)}>
         <div className="p-4">
           <h3 className="mb-3">Do you want to logout?</h3>
