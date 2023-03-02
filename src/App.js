@@ -42,7 +42,8 @@ function App() {
   );
   const [loginDisable, setloginDisable] = useState(true);
   const [logOutModal, setlogOutModal] = useState(false);
-
+  const [errorStatus, seterrorStatus] = useState(false);
+  const [successStatus, setsuccessStatus] = useState(false);
   function requestOTP() {
     fetch("https://www.contingentpro.com/generate", {
       method: "POST",
@@ -53,11 +54,15 @@ function App() {
     })
       .then((res) => {
         if (res.status == 422) {
-          toast.error("This Email ID doesn't exists in our system");
+          seterrorStatus(true);
+          setsuccessStatus(false);
+          // toast.error("This Email ID doesn't exists in our system");
           console.log(res);
         } else {
           setloginDisable(false);
-          toast.success("OTP Sent Successfully");
+          seterrorStatus(false);
+          setsuccessStatus(true);
+          // toast.success("OTP Sent Successfully");
           console.log(res);
         }
       })
@@ -110,6 +115,8 @@ function App() {
           path="/"
           element={
             <Login
+              errorStatus={errorStatus}
+              successStatus={successStatus}
               setUserEmail={setUserEmail}
               setOTP={setOTP}
               OTP={OTP}

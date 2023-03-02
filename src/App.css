@@ -282,3 +282,28 @@ div {
 .footer-titile{
   margin-top: 10px !important;
 }
+.scroller-table{
+  height: 500px;
+  overflow: scroll;
+  position: relative;
+  border: 1px solid rgb(225 225 225);
+  border-radius: 10px;
+}
+.scroller-table::-webkit-scrollbar {
+  width:4px;
+}
+.scroller-table::-webkit-scrollbar-thumb {
+  background-color: #DDDDDD;
+  border-radius: 1000px;
+}
+
+@media only screen and (max-width:770px) {
+  .scroller-table{
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width:650px) {
+  .homemdlistgroup{
+    width: 90% !important;
+  }
+}

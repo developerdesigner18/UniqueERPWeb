@@ -29,6 +29,8 @@ export default function Login({
   requestOTP,
   login,
   loginDisable,
+  successStatus,
+  errorStatus,
 }) {
   const [display, setDisplay] = useState("");
   const [displayContent, setDisplayContent] = useState();
@@ -88,10 +90,15 @@ export default function Login({
               <MDBBtn size="lg" onClick={() => requestOTP()}>
                 Request OTP
               </MDBBtn>
-
-              <p className="text-white-50 mb-3"></p>
-              <p className="text-white-50 mb-3"></p>
-
+              {errorStatus && (
+                <p className="text-danger mt-3">
+                  This Email ID doesn't exists in our system
+                </p>
+              )}
+              {successStatus && (
+                <p className="text-success mt-3">OTP Sent Successfully</p>
+              )}
+              {!successStatus && !errorStatus ? <br /> : null}
               <MDBInput
                 label="Enter received otp"
                 wrapperClass="mb-4 w-100"
