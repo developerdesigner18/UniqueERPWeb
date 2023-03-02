@@ -55,17 +55,22 @@ export default function Home({
             border="10px solid red"
             className="mx-auto w-100 mb-3 p-2"
           >
-            <MDBRow className="d-flex justify-content-center align-items-center g-0">
+            <MDBRow
+              className="d-flex justify-content-evenly  g-0"
+              style={{ overflow: "hidden" }}
+            >
               <MDBCol md="4" className="square ">
                 <MDBCardImage
                   src={require("./Referral Program Picture.png")}
                   alt="Refer your Friends"
                   fluid
+                  // height="100%"
+                  style={{ marginTop: "25px", float: "left" }}
                 />
               </MDBCol>
-              <MDBCol md="8" className="square rounded-9">
+              <MDBCol md="7" className="square rounded-9">
                 <MDBCardBody>
-                  <MDBCardTitle>
+                  <MDBCardTitle className="text-black fw-bold fs-5">
                     Refer Your Friends, Colleagues and Earn Continuously
                   </MDBCardTitle>
                   <MDBCardText>
@@ -89,10 +94,12 @@ export default function Home({
             border="10px solid red"
             className="mx-auto w-100 mb-3 p-2"
           >
-            <MDBRow className="d-flex justify-content-center align-items-center g-0">
-              <MDBCol md="8" className="square rounded-9">
+            <MDBRow className="d-flex justify-content-evenly  g-0">
+              <MDBCol md="7" className="square rounded-9">
                 <MDBCardBody>
-                  <MDBCardTitle>Interview and Earn</MDBCardTitle>
+                  <MDBCardTitle className="text-black fw-bold fs-5">
+                    Interview and Earn
+                  </MDBCardTitle>
                   <MDBCardText>
                     The key to the success is to find the right candidate for
                     the given opportunity. Interview is the key step to achieve
@@ -110,6 +117,7 @@ export default function Home({
                   src={require("./Interview Picture.jpg")}
                   alt="Interview and Earn"
                   fluid
+                  style={{ marginTop: "25px" }}
                 />
               </MDBCol>
             </MDBRow>
@@ -120,17 +128,20 @@ export default function Home({
             border="10px solid red"
             className="p-2"
           >
-            <MDBRow className="d-flex justify-content-center align-items-center g-0">
+            <MDBRow className="d-flex justify-content-evenly g-0">
               <MDBCol md="4">
                 <MDBCardImage
                   src={require("./Business Lead.jpg")}
                   alt="My Business Image"
                   fluid
+                  style={{ marginTop: "25px" }}
                 />
               </MDBCol>
-              <MDBCol md="8">
+              <MDBCol md="7">
                 <MDBCardBody>
-                  <MDBCardTitle>Generate Business Leads and Earn</MDBCardTitle>
+                  <MDBCardTitle className="text-black fw-bold fs-5">
+                    Generate Business Leads and Earn
+                  </MDBCardTitle>
                   <MDBCardText>
                     You know a project or resourcing opportunities within your
                     network, You can bringing those opportunities to this
@@ -169,7 +180,7 @@ export default function Home({
               </MDBCol>
               <MDBCol md="8" className="square rounded-9">
                 <MDBCardBody>
-                  <MDBCardTitle>
+                  <MDBCardTitle className="text-black fw-bold fs-5">
                     Refer Your Friends, Colleagues and Earn Continuously
                   </MDBCardTitle>
                   <MDBCardText>
@@ -203,7 +214,9 @@ export default function Home({
               </MDBCol>
               <MDBCol md="8" className="square rounded-9">
                 <MDBCardBody>
-                  <MDBCardTitle>Interview and Earn</MDBCardTitle>
+                  <MDBCardTitle className="text-black fw-bold fs-5">
+                    Interview and Earn
+                  </MDBCardTitle>
                   <MDBCardText>
                     The key to the success is to find the right candidate for
                     the given opportunity. Interview is the key step to achieve
@@ -234,7 +247,9 @@ export default function Home({
               </MDBCol>
               <MDBCol md="8">
                 <MDBCardBody>
-                  <MDBCardTitle>Generate Business Leads and Earn</MDBCardTitle>
+                  <MDBCardTitle className="text-black fw-bold fs-5">
+                    Generate Business Leads and Earn
+                  </MDBCardTitle>
                   <MDBCardText>
                     You know a project or resourcing opportunities within your
                     network, You can bringing those opportunities to this

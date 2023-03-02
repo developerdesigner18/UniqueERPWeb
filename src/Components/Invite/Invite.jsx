@@ -112,7 +112,7 @@ export default function Invite({
   }
 
   return (
-    <React.Fragment>
+    <React.Fragment style={{ display: "flex", flexDirection: "column" }}>
       <NavigationBar
         userEmail={userEmail}
         candidateId={candidateId}
@@ -121,7 +121,7 @@ export default function Invite({
         logOutModal={logOutModal}
         handleLogoutConform={handleLogoutConform}
       />
-      <div style={{ minHeight: "70vh" }}>
+      <div style={{ minHeight: "80vh" }}>
         <MDBCard
           className="bg-white my-5 mx-auto"
           border="10px solid red"
